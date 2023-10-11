@@ -12,7 +12,7 @@ register_vector(conn)
 
 bucket_url = "https://d3otl31mwgzea2.cloudfront.net/recommendation_system/"
 
-@router.post("/", tags=["visual_search_recommendations"])
+@router.post("/visual", tags=["visual_search_recommendations"])
 async def get_visual_recommendations(file: UploadFile = File(...)):
     try:
         contents = await file.read()
