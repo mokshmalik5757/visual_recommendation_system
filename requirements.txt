@@ -1,0 +1,25 @@
+fastapi
+uvicorn[standard]
+tensorflow
+numpy
+Pillow
+pgvector
+psycopg[binary,pool]
+boto3
+python-multipart
+pandas
+
+# docker run --name postgres_container -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres
+
+# apt-get update && apt-get -y install sudo
+
+# apt install git -y
+
+# cd /tmpcd /tmp
+# git clone --branch v0.5.0 https://github.com/pgvector/pgvector.git
+# cd pgvector
+# sudo apt install postgresql-server-dev-16 make gcc -y
+# make
+# make install 
+# sudo dpkg-reconfigure locales
+# en_US.UTF-8
