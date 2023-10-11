@@ -5,7 +5,6 @@ numpy
 Pillow
 pgvector
 psycopg[binary,pool]
-boto3
 python-multipart
 pandas
 

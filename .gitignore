@@ -412,6 +412,7 @@ $RECYCLE.BIN/
 vector_embeddings_dump.sql
 experiments
 .vscode
+.dockerignore
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,django,dotenv,flask,jupyternotebooks,python
 
