@@ -413,6 +413,8 @@ vector_embeddings_dump.sql
 experiments
 .vscode
 .dockerignore
+app/routers/api_route_test.py
+amazon_product_working_urls_data.csv
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,django,dotenv,flask,jupyternotebooks,python
 

@@ -7,7 +7,7 @@ import numpy as np
 
 router = APIRouter()
 df = pd.read_csv("./app/static/headless data preprocessed.csv")
-conn = psycopg.connect(dbname='vector_embeddings', user = "postgres", password = "password",host = "172.17.0.3", port = 5432, autocommit=True, )
+conn = psycopg.connect(dbname='vector_embeddings', user = "postgres", password = "password",host = "172.75.0.3", port = 5432, autocommit=True, )
 register_vector(conn)
 
 bucket_url = "https://d3otl31mwgzea2.cloudfront.net/recommendation_system/"

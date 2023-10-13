@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: postgres_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: postgres_db
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    networks:
+      visual_recommendation_network:
+        ipv4_address: 172.75.0.3
+
+  backend:
+    container_name: visual_recommendation_backend
+    build:
+      context: .
+      dockerfile: Dockerfile_backend
+    image: visual_recommendation
+    ports:
+      - "8001:8001"
+    networks:
+      visual_recommendation_network:
+        ipv4_address: 172.75.0.9
+    depends_on:
+      - postgres
+
+networks:
+  visual_recommendation_network:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.75.0.0/16
+        gateway: 172.75.0.1
