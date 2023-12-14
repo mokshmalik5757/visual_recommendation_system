@@ -23,7 +23,7 @@ async def get_visual_recommendations(file: UploadFile = File(...)):
                 f.write(contents)
         
             query = extract_features(temp_path)
-            confidence_score = 0.67
+            confidence_score = 0.87
             result = conn.execute('SELECT 1 - (embedding <=> %s) AS cosine_similarity, id, base_path FROM recommendation_system WHERE 1 - (embedding <=> %s) > %s ORDER BY cosine_similarity DESC', (query, query, confidence_score)).fetchall()
             bucket_path = []
             for element in result:
