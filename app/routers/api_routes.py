@@ -10,7 +10,7 @@ df = pd.read_csv("./app/static/headless data preprocessed.csv")
 conn = psycopg.connect(dbname='vector_embeddings', user = "postgres", password = "password",host = "172.75.0.3", port = 5432, autocommit=True, )
 register_vector(conn)
 
-bucket_url = "https://d3otl31mwgzea2.cloudfront.net/recommendation_system/"
+bucket_url = "https://dx2ctuk6q6hvo.cloudfront.net/recommendation_system/"
 
 @router.post("/visual", tags=["visual_search_recommendations"])
 async def get_visual_recommendations(file: UploadFile = File(...)):
